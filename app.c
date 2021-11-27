@@ -42,6 +42,9 @@ print_person_db(dll_t *person_db)
 	}
 }
 
+#define offset(struct_name, field_name) \
+	(unsigned int)&(((struct_name *)0)->field_name)
+
 int
 main(int argc, char *argv[])
 {
@@ -67,6 +70,8 @@ main(int argc, char *argv[])
 	add_data_to_dll(person_db, person3);
 
 	print_person_db(person_db);
+
+	printf("age field offset in struct is %d bytes\n", offset(person_t, age));
 
 	return 0;
 }
