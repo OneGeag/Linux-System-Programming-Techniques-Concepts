@@ -1,2 +1,3 @@
 # Linux-System-Programming-Techniques-Concepts
-course
+The course can be found here:
+https://www.udemy.com/course/advance-programming-concepts/
