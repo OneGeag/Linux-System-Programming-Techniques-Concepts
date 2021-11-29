@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 #define PROGRAMM_NAME
 
 #include "dll.h"
