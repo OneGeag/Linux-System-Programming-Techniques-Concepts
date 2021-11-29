@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <assert.h>
 
 #define PROGRAMM_NAME
 
@@ -42,8 +43,10 @@ print_person_db(dll_t *person_db)
 	}
 }
 
+#if 0
 #define offset(struct_name, field_name) \
 	(unsigned int)&(((struct_name *)0)->field_name)
+#endif
 
 int
 main(int argc, char *argv[])
@@ -71,7 +74,7 @@ main(int argc, char *argv[])
 
 	print_person_db(person_db);
 
-	printf("age field offset in struct is %d bytes\n", offset(person_t, age));
+	assert(1 == 2);
 
 	return 0;
 }
